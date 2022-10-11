@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-learning-angular';
 
-  isDanger = false;
-  isWarning = false;
-  classes = 'box border-orange bg-green';
+  // @Input() backgroundColor: string;
+  // @Input() progressColor: string;
+  // @Input() progress = 0;
+  currentProgress = 70;
 }
