@@ -1,59 +1,37 @@
 <div class="content" role="main">
-  <!-- #C1 -->
-  <!-- <ul>
-    <li
-      *ngFor="let author of authors; index as idx; count as total; first as isFirst; last as isLast; even as isEven; odd as isOdd">
-      <span>Name - id - email: {{author.name}} - {{author.id}} - {{author.email}}</span>
-      <br />
-      <span>at index {{idx}} out of {{total}}.</span>
-      <br />
-      <span *ngIf="isFirst">I'm even first. </span>
+  <button (click)="isDanger = !isDanger">Toggle Danger</button>
+  <br />
+  <button (click)="isWarning = !isWarning">Toggle Warning</button>
+  <br />
 
-      <span *ngIf="isLast">I'm even last. </span>
+  <!-- CLASS -->
+  <!-- #C1 [class.ten-class] -->
+  <!-- #C2 [class]="array" -->
+  <!-- #C3 [class]="object" {[ten-class: boolean]} -->
 
-      <span *ngIf="isEven">I'm even number. </span>
+  <!-- <div class="box border-orange bg-green"></div> -->
+  <!-- <div class="box" [class.border-orange]="isDanger" [class.bg-green]="isWarning"></div> -->
+  <!-- <div class="box" [class]="['border-orange', 'bg-green']"></div> -->
+  <!-- <div class="box" [class]="{'border-orange': isDanger, 'bg-green': isWarning}"></div> -->
+  <!-- <div [class]="classes"></div> -->
 
-      <span *ngIf="isOdd">I'm even number. </span>
-      <br />
-    </li>
-  </ul> -->
 
-  <!-- ngIf and ngFor -->
-  <ng-container *ngIf="authors.length > 0;else noUsers">
-    <li
-      *ngFor="let author of authors; index as idx; count as total; first as isFirst; last as isLast; even as isEven; odd as isOdd">
-      <span>Name - id - email: {{author.name}} - {{author.id}} - {{author.email}}</span>
-      <br />
-      <span>at index {{idx}} out of {{total}}.</span>
-      <br />
-      <span *ngIf="isFirst">I'm even first. </span>
+  <!-- STYLE -->
+  <!-- 
+    - [style.tenStyle]
+    - [style.ten-style]
+    - [style.tenStyle.unit]
+    - [style]="object"
+  -->
+  <!-- <p [style.color]="'red'" [style.background-color]="'yellow'" [style.fontSize.em]="2">
+    If you never try, You'll never know
+  </p> -->
 
-      <span *ngIf="isLast">I'm even last. </span>
+  <p [style.--text-color]="isDanger ? 'red' : 'blue'" [style]="{color: 'var(--text-color)'}">
+    If you never try, You'll never know
+  </p>
 
-      <span *ngIf="isEven">I'm even number. </span>
+  <p style="color: red">No Haha</p>
 
-      <span *ngIf="isOdd">I'm even number. </span>
-      <br />
-    </li>
-  </ng-container>
-  <ng-template #noUsers>No users</ng-template>
 
-  <!-- #C2 -->
-  <!-- <ul>
-    <ng-template ngFor [ngForOf]="authors" let-author let-idx="index" let-total="count" let-isFirst="first"
-      let-isLast="last" let-isEven="even" let-isOdd="odd">
-      <span>Name - id - email: {{author.name}} - {{author.id}} - {{author.email}}</span>
-      <br />
-      <span>at index {{idx}} out of {{total}}.</span>
-      <br />
-      <span *ngIf="isFirst">I'm even first. </span>
-
-      <span *ngIf="isLast">I'm even last. </span>
-
-      <span *ngIf="isEven">I'm even number. </span>
-
-      <span *ngIf="isOdd">I'm even number. </span>
-      <br />
-    </ng-template>
-  </ul> -->
 </div>
