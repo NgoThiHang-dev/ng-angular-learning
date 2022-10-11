@@ -3,10 +3,16 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AuthorsComponent } from './authors/authors-details.component';
-
+import { AuthorsListComponent } from './authors/author-list.component';
+import { AuthorsDetailsComponent } from './authors/authors-details.component';
+import { AuthorsComponent } from './authors/authors.component';
 @NgModule({
-  declarations: [AppComponent, AuthorsComponent],
+  declarations: [
+    AppComponent,
+    AuthorsComponent,
+    AuthorsListComponent,
+    AuthorsDetailsComponent,
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
