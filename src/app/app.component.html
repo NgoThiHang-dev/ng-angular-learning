@@ -1,6 +1,20 @@
 <authors-list></authors-list>
 
 <app-hello name="{{title}}"></app-hello>
-<input type="text" [ngModel]="title" (ngModelChange)="title = $event" />
-
+<input #nameInput type="text" [ngModel]="title" (ngModelChange)="title = $event" />
+<br />
+<br />
+<!-- <app-toggle #toggleComp [(checked)]="checked"></app-toggle> -->
 <app-toggle [(checked)]="checked"></app-toggle>
+<br />
+
+
+<button (click)="showLast = !showLast">Toggle show</button>
+
+
+
+<ng-container *ngIf="showLast">
+    <app-toggle [(checked)]="checked"></app-toggle>
+    <br />
+</ng-container>
+<!-- <button (click)="toggleComp.toggle()">Toggle me</button> -->

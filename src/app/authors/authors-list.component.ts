@@ -13,8 +13,8 @@ export class AuthorsListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log('currentAuthor');
-    console.log(this.currentAuthor);
+    // console.log('currentAuthor');
+    // console.log(this.currentAuthor);
   }
 
   onSelected(selectedAuthor: Author): void {
