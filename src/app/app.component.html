@@ -1,1 +1,6 @@
 <authors-list></authors-list>
+
+<app-hello name="{{title}}"></app-hello>
+<input type="text" [ngModel]="title" (ngModelChange)="title = $event" />
+
+<app-toggle [(checked)]="checked"></app-toggle>

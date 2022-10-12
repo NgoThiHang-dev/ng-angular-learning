@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-learning-angular';
+
+  checked: boolean = true;
 }
