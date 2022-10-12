@@ -24,6 +24,12 @@ export class AppComponent {
   checked: boolean = true;
   showLast: boolean = true;
 
+  name = 'Hang Ngo';
+  questions = {
+    question1: true,
+    question2: false,
+  };
+
   ngOnInit() {
     setTimeout(() => {
       this.nameInput.nativeElement.focus();

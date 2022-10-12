@@ -1,3 +1,19 @@
+<header>
+    <!-- {{header}} -->
+    <ng-content select=".toogle-header"></ng-content>
+</header>
 <div class="toggle-wrapper" [class.checked]="checked" tabindex="0" (click)="toggle()">
     <div class="toggle"></div>
+</div>
+<div class="toogle-label">
+    <ng-content select="label,span"></ng-content>
+</div>
+
+<div class="toggle-content">
+    <!-- {{content}} -->
+    <ng-content></ng-content>
+</div>
+
+<div class="skip" *ngIf="canSkip">
+    <button type="button">skip</button>
 </div>
