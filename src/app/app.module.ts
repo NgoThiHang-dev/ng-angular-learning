@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AuthorsListComponent } from './authors/author-list.component';
+import { AuthorsListComponent } from './authors/authors-list.component';
 import { AuthorsDetailsComponent } from './authors/authors-details.component';
 import { AuthorsComponent } from './authors/authors.component';
 @NgModule({
