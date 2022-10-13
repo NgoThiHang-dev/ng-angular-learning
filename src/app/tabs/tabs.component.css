@@ -1,0 +1,17 @@
+.tab-headers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.tab-header-item {
+  width: 10%;
+}
+
+.btn-remove {
+  border: none;
+  background: #dd6b6b;
+  color: #fff;
+  border-radius: 4px;
+}

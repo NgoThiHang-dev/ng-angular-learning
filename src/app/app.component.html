@@ -1,18 +1,15 @@
-<div class="card m-4">
-    <div class="card-header">
-        You have selected
-        <ng-container [ngTemplateOutlet]="counterTemplate"></ng-container> items.
-    </div>
-    <div class="card-body">
-        There are <ng-container [ngTemplateOutlet]="counterTemplate"></ng-container> items was
-        selected.
-    </div>
-    <div class="card-footer">
-        You have selected
-        <ng-container [ngTemplateOutlet]="counterTemplate"></ng-container> items.
-    </div>
-</div>
+<tab-group [(activeIndex)]="currentIndex">
+    <tab-panel title="First tab">First tab content</tab-panel>
+    <tab-panel title="Second tab">Second tab content</tab-panel>
+    <tab-panel title="Third tab">Third tab content</tab-panel>
+    <tab-panel title="Fourth tab">Fourth tab content</tab-panel>
+    <tab-panel title="Fifth tab">Fifth tab content</tab-panel>
+</tab-group>
 
-<ng-template #counterTemplate>
-    <span class="badge bg-danger">{{ counter }}</span>
-</ng-template>
+<tab-bs-group [(activeIndex)]="currentIndex">
+    <tab-panel title="First tab">First tab content</tab-panel>
+    <tab-panel title="Second tab">Second tab content</tab-panel>
+    <tab-panel title="Third tab">Third tab content</tab-panel>
+    <tab-panel title="Fourth tab">Fourth tab content</tab-panel>
+    <tab-panel title="Fifth tab">Fifth tab content</tab-panel>
+</tab-bs-group>
