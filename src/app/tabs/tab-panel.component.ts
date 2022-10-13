@@ -1,10 +1,12 @@
 import {
   Component,
+  ContentChild,
   Input,
   OnInit,
   TemplateRef,
   ViewChild,
 } from '@angular/core';
+import { TabPanelContentDirective } from './tab-content.directive';
 import { TabGroupComponent } from './tab-group.component';
 
 @Component({
@@ -14,10 +16,21 @@ import { TabGroupComponent } from './tab-group.component';
 })
 export class TabPanelComponent implements OnInit {
   @Input() title: string;
-  @ViewChild(TemplateRef, { static: true }) panelBody: TemplateRef<unknown>;
+  @ViewChild(TemplateRef, { static: true }) impliciBody: TemplateRef<unknown>;
+  @ContentChild(TemplateRef, { static: true, read: TemplateRef })
+  explicitBody: TemplateRef<unknown>;
+
   constructor(private tabGroup: TabGroupComponent) {}
+
+  get panelBody(): TemplateRef<unknown> {
+    return this.explicitBody || this.impliciBody;
+  }
 
   ngOnInit(): void {
     this.tabGroup.addTab(this);
+  }
+
+  ngOnDestroy(): void {
+    this.tabGroup.removeTab(this);
   }
 }

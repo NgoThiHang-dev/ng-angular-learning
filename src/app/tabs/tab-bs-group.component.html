@@ -2,7 +2,7 @@
     <ul class="nav nav-tabs">
         <li class="nav-item" *ngFor="let tab of tabPanelList; let idx = index">
             <a class="nav-link" [class.active]="idx === activeIndex" (click)="activeIndexChange.emit(idx)">{{tab.title}}
-                <button (click)="removeTab(tab)" class="btn-remove">Remove</button>
+                <button (click)="removeTab(tab)" class="btn-remove">x</button>
             </a>
         </li>
     </ul>

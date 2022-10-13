@@ -8,5 +8,7 @@ export class AppComponent {
   title = 'ng-learning-angular';
 
   currentIndex = 0;
+  showTab: boolean = true;
+
   ngOnInit() {}
 }
