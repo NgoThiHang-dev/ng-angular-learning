@@ -6,7 +6,7 @@
     <tab-panel title="Fifth tab">Fifth tab content</tab-panel>
 </tab-group> -->
 
-<div class="btn btn-primary m-4" (click)="showTab = !showTab"> Toggle tab</div>
+<!-- <div class="btn btn-primary m-4" (click)="showTab = !showTab"> Toggle tab</div>
 
 <tab-bs-group [(activeIndex)]="currentIndex">
     <tab-panel title="First tab">
@@ -39,4 +39,59 @@
             <app-counter></app-counter>
         </ng-template>
     </tab-panel>
-</tab-bs-group>
+</tab-bs-group> -->
+
+
+<p>{{name}}</p>
+<p>{{name | lowercase}}</p>
+<p>{{name | uppercase}}</p>
+
+<br />
+
+<p>{{currentDate | date}}</p>
+<p>{{currentDate | date:'shortDate'}}</p>
+<p>{{currentDate | date:'madiumDate'}}</p>
+<p>{{currentDate | date:'fullDate'}}</p>
+<p>{{currentDate | date:'yyyy-MM-dd'}}</p>
+<p>{{currentDate | date:'dd-mm-yyyy'}}</p>
+<p>{{currentDate | date:'dd/mm/yyyy'}}</p>
+
+<br />
+
+<p>{{250 | currency}}</p>
+<p>{{250 | currency:'VND'}}</p>
+
+<br />
+
+<p>{{2.253898989582150 | number:'1.1-4'}}</p>
+<p>{{2.253898989582150 | percent}}</p>
+
+<br />
+
+<p>{{user | json}}</p>
+
+
+<br />
+<p>{{time}}</p>
+
+<p>{{formatAddress(addr)}}</p>
+
+<br />
+
+<!-- <p>{{addr | formatAddress:'paral'}}</p> -->
+
+<br />
+
+<button (click)="addUser()">Add User</button>
+
+<p>List user</p>
+<ul>
+    <li *ngFor="let user of users"> {{user.name}} - {{user.age}}</li>
+</ul>
+
+<br />
+
+<p>Adult List user</p>
+<ul>
+    <li *ngFor="let user of users | adult"> {{user.name}} - {{user.age}}</li>
+</ul>
