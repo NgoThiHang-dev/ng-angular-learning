@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 
-import { ChildComponentComponent } from './child-component/child-component.component';
-
 @NgModule({
-  declarations: [AppComponent, ChildComponentComponent],
-  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, FormControl],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,13 @@
-<button (click)="increment()">Increment</button>
-<button (click)="decrement()">decrement</button>
+<!-- <input type="text" [formControl]="queryControl" placeholder="Search..." /> -->
 
+<br />
 
-<child-component [count]=Counter></child-component>
+<p *ngIf="loading">
+    Loading {{queryControl.value ? 'with query: "' + queryControl.value + '"...' : '...}}
+</p>
+
+<ul *ngIf="queryControl.value">
+    <li *ngFor="let user of users">
+        <!-- <pre>{{user | json}}</pre> -->
+    </li>
+</ul>
