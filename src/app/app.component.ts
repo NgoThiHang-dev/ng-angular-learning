@@ -6,12 +6,8 @@ import { interval } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  Counter = 5;
-  increment() {
-    this.Counter++;
+  countParent: number;
+  countChangedHandle(count: number) {
+    this.countParent = count;
   }
-  decrement() {
-    this.Counter--;
-  }
-  ngOnInit() {}
 }

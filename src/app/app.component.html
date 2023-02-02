@@ -1,5 +1,10 @@
-<button (click)="increment()">Increment</button>
-<button (click)="decrement()">decrement</button>
+<!-- <h2>Parent Component</h2>
+<p>Count parent: {{countParent}}</p> -->
+
+<!-- <child-component (countChanged)="countChangedHandle($event)"></child-component> -->
 
 
-<child-component [count]=Counter></child-component>
+<button (click)="child.increment()">Increment</button>
+<button (click)="child.decrement()">Decrement</button>
+<h1>Parent count: {{child.count}}</h1>
+<child-component #child></child-component>
